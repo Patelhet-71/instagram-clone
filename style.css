@@ -1,0 +1,458 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #FAFAFA;
+    display: flex;
+
+    /* background-color: aqua; */
+}
+
+.container{
+    /* position: relative; */
+    /* border-bottom: 1px solid #DBDBDB; */
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    /* display: flex; */
+    flex-direction: column;
+    
+    /* border: 2px solid black; */
+    /* padding: 10px 5px; */
+    /* background-color: aqua; */
+}
+
+.header{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    display: flex;
+    padding: 0 25%;
+    justify-content: space-between;
+    z-index: 1000;
+    background-color: #fff;
+    border-bottom: 1px solid #DBDBDB;
+    /* border: 2px solid red; */
+}
+.header .logo img{
+    cursor: pointer;
+} 
+
+.search{
+    position: absolute;
+    margin:0 5%;
+    margin-left: 13%;
+    position: relative;
+    display: flex;
+    color: #A7A9AC;
+}
+
+.search input{
+    cursor: pointer;
+    position: relative;
+    width: 120%;
+    height: 25px;
+    color: #111;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    outline: none;
+    margin: 0 auto;
+    padding: 0 10px;
+    padding-left: 25px;
+    font-size: 15px;
+    cursor: text;
+}
+
+.search span{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 16px;
+}
+
+.navigation{
+    /* border: 2px solid blue; */
+    justify-content: right;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.navigation span ,
+.navigation i ,
+.navigation img {
+    margin: 0 7px;
+    font-size: 30px;
+    color: #262626;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+.navigation i{
+    font-size: 25px;
+}
+.navigation img {
+    border-radius: 50%;
+    border: 1px solid #afafaf;
+}
+
+/* -------------------  content ------------------------------------------------------- */
+
+.contant{
+    position: absolute;
+    top: 60px;
+    left: 25%;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 auto;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* border: 2px solid red; */
+}
+
+.contant .leftSide{
+    position:relative;
+    top: 30px;
+    /* height: 100%;
+    width: 100%; */
+    display: flex;
+    flex: 65%;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* border: 2px solid black; */
+}
+
+
+.contant .leftSide .story{
+    width: 100%;
+    height: 115px;
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    padding: 5px 10px;
+    overflow: hidden ;
+}
+
+.contant .leftSide .story::after{
+    content: '';
+    position:absolute;
+    top:35px ;
+    right: 5px;
+    height: 20px;
+    width: 20px;
+    background: #fff ;
+    border-radius: 50%;
+    background-image: url(/img/right-24.png) ;
+    background-size: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.contant .leftSide .story .st {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.contant .leftSide .story .st img{
+    width: 60px;
+    padding: 2px;
+    background: linear-gradient(200deg, #4f5bd5 0%,#962fbf 25% ,#d62976 50%, #fa7e1e 75%,#feda75 100%);
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.contant .leftSide .story .st p{
+    white-space: nowrap; 
+    width: 50px; 
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+
+.posts{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    /* border: 2px solid red; */
+}
+.post{
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    /* border: 2px solid red; */
+    margin: 15px 0;
+    background: #fff;
+    border: 1px solid #DBDBDB;
+
+}
+
+.post_header{
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 60px;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+.post_header img{
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.post_header p{
+    position: absolute;
+    left: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.post_header p:hover{
+    text-decoration: underline;
+}
+
+.post_header .dot_menu{
+    font-size: 4px;
+    cursor: pointer;
+    padding: 10px;
+}
+.post_header .dot_menu i{
+    margin: 0 1px;
+    color: #262626;
+    
+}
+
+.post_contant{
+    width: 100%;
+    height: 100%;
+}
+.post_contant img{
+    width: 100%;
+}
+
+.post_feedback{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.post_feedback .post_reaction{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.post_feedback .post_reaction i{
+    font-size: 25px;
+    margin: 0 2px;
+    opacity: 0.8;
+    margin-right: 10px;
+    color: #262626;
+    cursor: pointer;
+}
+.post_feedback .post_reaction i:hover{
+    color: #8E8E8E;
+}
+.post_feedback .post_count{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 12px;
+    margin-top: 8px;
+    font-size: 18px;
+    padding-bottom: 15px;
+    color: #262626;
+    border-bottom: 1px solid #EFEFEF;
+    
+}
+.post_feedback .post_count p{
+    line-height: 1.5;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.post_feedback .post_count small{
+    font-size: 11px;
+    color: #8E8E8E;
+    margin-top: 8px;
+    cursor: pointer;
+}
+.post_cmt{
+    display: flex;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    margin: 10px 0;
+}
+
+.post_cmt i{
+    font-size: 23px;
+    opacity: 0.8;
+    color: #262626;
+    cursor: pointer;
+}
+
+.post_cmt input{
+    width: 88%;
+    outline: none;
+    border: none;
+    color: #8E8E8E;
+    background-color: #fff;
+    height: 30px;
+    font-size: 14px;
+    cursor:text;
+}
+
+.post_cmt p{
+    color: rgb(0, 149, 246);
+    opacity: 0.3;    
+}
+
+
+
+.contant .rightSide{
+    position:sticky;
+    top: 100px;
+    margin-left: 15px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 35%;
+    text-align: center;
+    justify-content: center;
+    /* align-items: center; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* border: 2px solid red; */
+    
+}
+
+.profile_card{
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    align-items: center;
+    margin: 5px 0;
+    padding: 2px 10px;
+}
+
+.profile_card .profile_img{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+    
+}
+
+.profile_card:first-child .profile_img img{
+    width: 60px;
+}
+
+.profile_card .profile_img img{
+    width: 40px;
+    border-radius: 50%;
+    padding: 1px;
+    border: 1px solid #868686;
+}
+.profile_card .profile_name{
+    position: absolute;
+    left: 60px;
+    text-align: left;
+    font-weight: 600;
+}
+.profile_card:first-child .profile_name{
+    position: absolute;
+    left: 80px;
+    
+}
+
+.profile_card .username{
+    font-size: 14px;
+    color: #262626;
+    cursor: pointer;
+}
+.profile_card .sub-text{
+    font-size: 12px;
+    color: #8E8E8E;
+    cursor:text;
+    
+}
+
+.profile_card .action-btn{
+    border: none;
+    color: #0095F6;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: #FAFAFA;
+    cursor: pointer;
+}
+
+.suggestion-text{
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+    color: #8E8E8E;
+    padding: 5px 10px;
+
+}
+
+.rightSide .footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 10px;
+    margin-top: 25px;
+    margin-left: 5px;
+}
+.rightSide .footer li{
+    list-style-type: none;
+    list-style-position: outside;
+    margin-right: 13px;
+    line-height: 1.7;
+    font-weight: 600;    
+    color: #C7C7C7;
+    cursor: pointer;
+}
+
+.rightSide .footer li:last-child{
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 400;
+}
